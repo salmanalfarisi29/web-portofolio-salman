@@ -49,7 +49,7 @@ export default function Hero() {
           {displayedText}
           <span className="animate-blink">|</span>
         </h1>
-        <p className="text-lg md:text-xl font-semibold mt-2 text-blue-500 dark:text-yellow-400">
+        <p className="text-lg md:text-xl font-semibold mt-2 text-green-500">
           Front-End Web Developer
         </p>
         <p className="mt-4 text-md md:text-lg leading-relaxed">

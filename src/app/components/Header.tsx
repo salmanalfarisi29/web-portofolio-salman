@@ -24,7 +24,7 @@ export default function Header() {
             <Link
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className="hover:text-green-500 dark:hover:text-yellow-400 transition font-medium"
+              className="hover:text-green-500 dark:hover:text-green-500 transition font-medium"
             >
               {item}
             </Link>

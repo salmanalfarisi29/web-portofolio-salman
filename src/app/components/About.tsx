@@ -43,7 +43,7 @@ export default function About() {
         viewport={{ once: true }}
         className="max-w-lg mt-8 md:mt-0 md:ml-12 text-center md:text-left text-gray-900 dark:text-white"
       >
-        <h2 className="text-lg font-semibold uppercase tracking-wider text-green-500">
+        <h2 className="text-lg font-semibold uppercase tracking-wider">
           About Me
         </h2>
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
@@ -52,22 +52,15 @@ export default function About() {
         
         {/* Storytelling */}
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
-          I’ve always been fascinated by how technology can **enhance user experience**. 
+          I’ve always been fascinated by how technology can enhance user experience. 
           My journey started with a simple curiosity about how websites worked, which later 
-          turned into a deep passion for **crafting intuitive & engaging UI**.  
+          turned into a deep passion for **crafting intuitive & engaging UI.  
         </p>
         
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
           As a <span className="font-semibold text-green-500">Front-end Developer</span>, 
-          I believe that **design is not just about aesthetics, but also usability and performance**.  
-          I focus on **creating seamless experiences**, ensuring every interaction feels natural and smooth.
-        </p>
-
-        <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
-          One of the biggest challenges I faced was **building a real-time conversation logging app** 
-          using **Vue.js & WebSocket** for a government agency. Ensuring **data accuracy** and 
-          **live updates without delay** was a challenge, but it taught me **problem-solving skills 
-          and the importance of optimization**.
+          I believe that design is not just about aesthetics, but also usability and performance.  
+          I focus on creating seamless experiences, ensuring every interaction feels natural and smooth.
         </p>
 
         {/* Statistik */}
@@ -92,14 +85,14 @@ export default function About() {
           >
             Contact Me
           </motion.a>
-          <motion.a
+          {/* <motion.a
             href="#portfolio"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 border-2 border-green-500 text-green-500 font-bold rounded-lg shadow-lg hover:bg-green-500 hover:text-white transition text-center w-full sm:w-auto"
           >
             Portfolio
-          </motion.a>
+          </motion.a> */}
         </div>
       </motion.div>
     </motion.section>

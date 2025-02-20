@@ -36,7 +36,7 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          EDUCATION & SKILLS
+          Education and Skills
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10">
