@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  // Efek Mengetik Looping
+  // Efek Mengetik Looping dengan Delay
   const fullText = "Salman Alfarisi";
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = 150; // Kecepatan mengetik
-  const deletingSpeed = 75; // Kecepatan menghapus
+  const typingSpeed = 100; // Kecepatan mengetik
+  const deletingSpeed = 50; // Kecepatan menghapus
+  const delayBeforeDelete = 1500; // Delay sebelum mulai menghapus
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -21,7 +22,7 @@ export default function Hero() {
         setDisplayedText((prev) => prev.slice(0, -1));
         setIndex(index - 1);
       } else {
-        setIsDeleting(!isDeleting);
+        setTimeout(() => setIsDeleting(!isDeleting), delayBeforeDelete); // Delay sebelum menghapus
       }
     }, isDeleting ? deletingSpeed : typingSpeed);
 

@@ -29,13 +29,19 @@ export default function About() {
           About Me
         </h2>
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
-          I'm a <span className="text-green-500">Freelancer Front-end Developer</span> with over{" "}
-          <span className="text-green-500">3 years</span> of experience.
+          I'm a <span className="text-green-500">Front-end Developer</span> with experience{" "}
+          <span className="text-green-500">working on</span> serveral projects.
         </h3>
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
           I'm a Front-End Developer specializing in React.js, Next.js, and JavaScript. 
           I code and create web elements for amazing people worldwide. I enjoy working with 
           new clients, tackling exciting projects, and constantly learning.
+        </p>
+
+        <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+          As a <span className="font-semibold text-green-500">Front-end Developer</span>, 
+          I believe that design is not just about aesthetics, but also usability and performance.  
+          I focus on creating seamless experiences, ensuring every interaction feels natural and smooth.
         </p>
 
         {/* Statistik */}
@@ -52,22 +58,24 @@ export default function About() {
 
         {/* Tombol */}
         <div className="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-          <motion.a
-            href="#contact"
+        <motion.a
+            href="https://www.linkedin.com/in/salmanalfarisi31"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition text-center w-full sm:w-auto"
           >
             Contact Me
           </motion.a>
-          <motion.a
+          {/* <motion.a
             href="#portfolio"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 border-2 border-green-500 text-green-500 font-bold rounded-lg shadow-lg hover:bg-green-500 hover:text-white transition text-center w-full sm:w-auto"
           >
             Portfolio
-          </motion.a>
+          </motion.a> */}
         </div>
       </div>
     </section>
