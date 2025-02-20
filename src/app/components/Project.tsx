@@ -7,13 +7,13 @@ const projects = [
     name: "Berita Acara Kejaksaan RI (RITASARI)",
     description:
       "Automatic conversation logging desktop application using speech-to-text technology. Built the front-end with Vue.js and WebSocket integration.",
-    technologies: ["Vue.js", "WebSocket", "Speech-to-Text"],
+    technologies: ["Vue.js", "Express.js", "WebSocket"],
   },
   {
     name: "Methings",
     description:
       "A more advanced version of RITASARI, with enhanced features. Responsible as a front-end developer using Vue.js.",
-    technologies: ["Vue.js", "Real-time Communication"],
+    technologies: ["Vue.js", "Express.js", "WebSocket"],
   },
   {
     name: "Basyir",
@@ -25,13 +25,13 @@ const projects = [
     name: "Parkfacilities",
     description:
       "A web-based application introducing city parks in Bandung. Responsible as a front-end developer and ensured mobile responsiveness.",
-    technologies: ["React.js", "Next.js", "Google Maps API"],
+    technologies: ["HTML", "CSS", "JS", "Boostrap"],
   },
   {
     name: "Service Vessel Trajectory Prediction",
     description:
       "Developed a ship prediction service implemented in a combat management system simulator. Role: System Analyst.",
-    technologies: ["Python", "AI Prediction", "Combat Systems"],
+    technologies: ["C++", "Extended Kalman Filter", "Combat Management Systems", "MQTT"],
   },
   {
     name: "Aiz Elektronik Company Profile",
@@ -44,7 +44,7 @@ const projects = [
     name: "Web-based Automatic Conveyor Monitoring",
     description:
       "Developed a real-time monitoring system for automatic sorting using conveyor machines. Integrated WebSocket for live updates.",
-    technologies: ["React.js", "WebSocket", "IoT Integration"],
+    technologies: ["MERN Stack", "WebSocket", "IoT Integration"],
   },
 ];
 
