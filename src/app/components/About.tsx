@@ -18,6 +18,7 @@ export default function About() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl"
+        id="about-me"
       >
         {/* Animasi Hover pada Foto */}
         {["/img1.jpg", "/img2.jpg"].map((src, index) => (

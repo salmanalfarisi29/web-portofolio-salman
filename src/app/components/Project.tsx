@@ -55,32 +55,45 @@ export default function Projects() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
+      id="projects"
       className="py-16 px-6 md:px-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto">
+        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          Professional Projects
+          Projects
         </h2>
         <p className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
           Here are some key projects I have worked on, showcasing my experience in front-end development, system analysis, and real-time applications.
         </p>
 
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6 mt-12">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 255, 100, 0.2)",
+              }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-l-4 border-green-500"
+              className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-l-4 border-green-500 cursor-pointer"
             >
+              {/* Project Name */}
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                 {project.name}
               </h3>
+
+              {/* Project Description */}
               <p className="mt-2 text-gray-700 dark:text-gray-300">
                 {project.description}
               </p>
+
+              {/* Technologies Used */}
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span
@@ -91,6 +104,8 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+
+              {/* Live Demo Button (Jika Ada) */}
               {project.liveDemo && (
                 <motion.a
                   href={project.liveDemo}

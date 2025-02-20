@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "JavaScript", level: 90 },
+  { name: "HTML, CSS, JS", level: 90 },
   { name: "React.js", level: 85 },
   { name: "Next.js", level: 80 },
-  { name: "Tailwind CSS", level: 85 },
+  { name: "Tailwind CSS", level: 75 },
   { name: "Node.js", level: 75 },
   { name: "TypeScript", level: 70 },
 ];
@@ -35,7 +35,9 @@ export default function Skills() {
     >
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8"
+             id="skills"
+        >
           Education and Skills
         </h2>
 
@@ -50,8 +52,12 @@ export default function Skills() {
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 shadow-md mb-4"
+                whileHover={{
+                  scale: 1.05,
+                  y: -5,
+                  boxShadow: "0px 0px 15px rgba(34, 197, 94, 1)", // Glow hijau lebih tajam tanpa blur
+                }}
+                className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 shadow-md mb-4 transition-all duration-300 border-l-4 border-green-500"
               >
                 <span className="inline-block bg-green-500 text-white text-sm px-3 py-1 rounded-full font-semibold">
                   {edu.year}
