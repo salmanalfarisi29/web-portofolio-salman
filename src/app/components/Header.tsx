@@ -26,7 +26,7 @@ export default function Header() {
 
         {/* Navbar - Desktop Mode */}
         <nav className="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300">
-          {["About Me", "Skills", "Projects", "Galeri"].map((item) => (
+          {["About Me", "Skills", "Projects"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}

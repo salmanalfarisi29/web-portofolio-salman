@@ -30,7 +30,12 @@ export default function Hero() {
   }, [index, isDeleting]);
 
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-20 py-10 dark:bg-gray-900 transition-all duration-300 border-b border-gray-300 dark:border-gray-700">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="relative flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-20 py-10 dark:bg-gray-900 transition-all duration-300 border-b border-gray-300 dark:border-gray-700"
+    >
       {/* Kiri: Teks */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -75,12 +80,15 @@ export default function Hero() {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0 bg-green-500 rounded-full w-60 h-60 md:w-96 md:h-96"
         ></motion.div>
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
           src="/profile.png"
           alt="Salman Alfarisi"
           className="relative z-10 w-60 h-60 md:w-96 md:h-96 object-cover rounded-full shadow-lg"
         />
       </motion.div>
-    </section>
+    </motion.section>
   );
 }

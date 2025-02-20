@@ -4,9 +4,21 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 dark:bg-gray-900 transition-all duration-300">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="relative flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 dark:bg-gray-900 transition-all duration-300"
+    >
       {/* Kiri: Grid Foto */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl"
+      >
         {/* Animasi Hover pada Foto */}
         {["/img1.jpg", "/img2.jpg"].map((src, index) => (
           <motion.div
@@ -21,27 +33,41 @@ export default function About() {
             />
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Kanan: Deskripsi */}
-      <div className="max-w-lg mt-8 md:mt-0 md:ml-12 text-center md:text-left text-gray-900 dark:text-white">
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 3 }}
+        viewport={{ once: true }}
+        className="max-w-lg mt-8 md:mt-0 md:ml-12 text-center md:text-left text-gray-900 dark:text-white"
+      >
         <h2 className="text-lg font-semibold uppercase tracking-wider text-green-500">
           About Me
         </h2>
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
-          I'm a <span className="text-green-500">Front-end Developer</span> with experience{" "}
-          <span className="text-green-500">working on</span> serveral projects.
+          Passionate About <span className="text-green-500">Building Beautiful & Functional UI</span>
         </h3>
+        
+        {/* Storytelling */}
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
-          I'm a Front-End Developer specializing in React.js, Next.js, and JavaScript. 
-          I code and create web elements for amazing people worldwide. I enjoy working with 
-          new clients, tackling exciting projects, and constantly learning.
+          I’ve always been fascinated by how technology can **enhance user experience**. 
+          My journey started with a simple curiosity about how websites worked, which later 
+          turned into a deep passion for **crafting intuitive & engaging UI**.  
+        </p>
+        
+        <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+          As a <span className="font-semibold text-green-500">Front-end Developer</span>, 
+          I believe that **design is not just about aesthetics, but also usability and performance**.  
+          I focus on **creating seamless experiences**, ensuring every interaction feels natural and smooth.
         </p>
 
         <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
-          As a <span className="font-semibold text-green-500">Front-end Developer</span>, 
-          I believe that design is not just about aesthetics, but also usability and performance.  
-          I focus on creating seamless experiences, ensuring every interaction feels natural and smooth.
+          One of the biggest challenges I faced was **building a real-time conversation logging app** 
+          using **Vue.js & WebSocket** for a government agency. Ensuring **data accuracy** and 
+          **live updates without delay** was a challenge, but it taught me **problem-solving skills 
+          and the importance of optimization**.
         </p>
 
         {/* Statistik */}
@@ -58,26 +84,24 @@ export default function About() {
 
         {/* Tombol */}
         <div className="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-        <motion.a
-            href="https://www.linkedin.com/in/salmanalfarisi31"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.a
+            href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition text-center w-full sm:w-auto"
           >
             Contact Me
           </motion.a>
-          {/* <motion.a
+          <motion.a
             href="#portfolio"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 border-2 border-green-500 text-green-500 font-bold rounded-lg shadow-lg hover:bg-green-500 hover:text-white transition text-center w-full sm:w-auto"
           >
             Portfolio
-          </motion.a> */}
+          </motion.a>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
