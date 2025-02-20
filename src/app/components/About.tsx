@@ -43,7 +43,7 @@ export default function About() {
         viewport={{ once: true }}
         className="max-w-lg mt-8 md:mt-0 md:ml-12 text-center md:text-left text-gray-900 dark:text-white"
       >
-        <h2 className="text-lg font-semibold uppercase tracking-wider">
+        <h2 className="text-lg font-bold uppercase tracking-wider">
           About Me
         </h2>
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2">
@@ -66,11 +66,11 @@ export default function About() {
         {/* Statistik */}
         <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-6 space-y-4 sm:space-y-0 sm:space-x-8">
           <div>
-            <p className="text-2xl sm:text-3xl font-bold text-green-500">5+</p>
+            <p className="text-2xl sm:text-3xl font-bold text-green-500">7+</p>
             <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Projects Completed</p>
           </div>
           <div>
-            <p className="text-2xl sm:text-3xl font-bold text-green-500">3+</p>
+            <p className="text-2xl sm:text-3xl font-bold text-green-500">7+</p>
             <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Satisfied Clients</p>
           </div>
         </div>

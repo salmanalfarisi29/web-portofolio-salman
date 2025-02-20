@@ -51,7 +51,7 @@ export default function Skills() {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.05 }}
-                className="bg-gray-200 dark:bg-gray-800 rounded-lg p-5 shadow-md mb-4"
+                className="bg-gray-100 dark:bg-gray-800 rounded-lg p-5 shadow-md mb-4"
               >
                 <span className="inline-block bg-green-500 text-white text-sm px-3 py-1 rounded-full font-semibold">
                   {edu.year}
