@@ -79,7 +79,9 @@ export default function About() {
         {/* Tombol */}
         <div className="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <motion.a
-            href="#contact"
+            href="https://linkedin.com/in/salmanalfarisi31"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow-lg hover:bg-green-600 transition text-center w-full sm:w-auto"
