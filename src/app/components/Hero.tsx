@@ -50,16 +50,17 @@ export default function Hero() {
           I Am Passionate Developer
         </p>
         <p className="mt-4 text-lg">
-          I design and develop services for customers of all sizes, specializing in creating stylish,
-          modern websites, web services, and online stores.
+          A highly motivated Front-End Developer specializing in React.js, Next.js, JavaScript. Graduated in Informatics Engineering from Politeknik Negeri Bandung, with hands-on experience in developing responsive and dynamic web applications.
         </p>
-        <motion.button
+        <motion.a
+          href="/CV ATS SALMAN ALFARISI.pdf" // Pastikan file ada di public/
+          download="CV ATS SALMAN ALFARISI.pdf"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 px-6 py-3 bg-green-500 text-white font-bold rounded shadow-lg hover:bg-green-600 transition"
+          className="mt-6 px-6 py-3 bg-green-500 text-white font-bold rounded shadow-lg hover:bg-green-600 transition inline-block"
         >
           Download CV
-        </motion.button>
+        </motion.a>
       </motion.div>
 
       {/* Kanan: Gambar */}
