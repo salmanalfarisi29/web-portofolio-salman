@@ -20,9 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900 transition-all duration-300`}
-      >
+      <body className="dark:bg-gray-900 bg-white transition-all duration-300">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

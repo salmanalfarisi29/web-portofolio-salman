@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
@@ -8,12 +8,27 @@ import Link from "next/link";
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
-  const [isOpen, setIsOpen] = useState(false); // State untuk mobile menu
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    setTimeout(() => {
+      setIsHeaderVisible(true);
+    }, 100); // Tambahkan delay kecil untuk memastikan render awal
+  }, []);
+
+  if (!isMounted) return null; // Cegah render sebelum mounted
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md py-4 transition-all duration-300">
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={isHeaderVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md py-4 transition-all duration-300"
+    >
       <div className="container mx-auto px-6 flex justify-between items-center w-full">
-        {/* Branding */}
         <h1 className="text-xl font-bold text-gray-800 dark:text-white">
           Salman&apos;s Portfolio
         </h1>
@@ -31,7 +46,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Light/Dark Mode Toggle & Menu di Sebelah Kiri */}
+        {/* Light/Dark Mode Toggle */}
         <div className="hidden md:flex items-center space-x-4">
           <button onClick={toggleTheme} className="text-gray-700 dark:text-white">
             {theme === "light" ? <FiMoon size={24} /> : <FiSun size={24} />}
@@ -72,6 +87,6 @@ export default function Header() {
           </button>
         </motion.div>
       )}
-    </header>
+    </motion.header>
   );
 }

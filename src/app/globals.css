@@ -5,10 +5,21 @@
 /* Styling dasar */
 html {
   @apply transition-colors duration-300 bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+  overflow-x: hidden;
 }
 
 body {
   @apply transition-colors duration-300;
+  padding-top: 64px; /* Supaya navbar tidak overlap */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Pastikan button memiliki efek hover */
