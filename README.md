@@ -22,8 +22,8 @@
 ## 🛠 **Installation & Setup**
 1️⃣ **Clone this repository:**  
    ```bash
-   git clone https://github.com/salmanalfarisi29/web-portofolio
-   cd web-portfolio
+   git clone https://github.com/salmanalfarisi29/web-portofolio-salman
+   cd web-portfolio-salman
    ```
 
 2️⃣ **Install dependencies:**
