@@ -7,31 +7,31 @@ const projects = [
     name: "Berita Acara Kejaksaan RI (RITASARI)",
     description:
       "Automatic conversation logging desktop application using speech-to-text technology. Built the front-end with Vue.js and WebSocket integration.",
-    technologies: ["Vue.js", "Express.js", "WebSocket"],
+    technologies: ["Vue.js", "Electron.js", "Socket.io", "Express.js"],
   },
   {
     name: "Methings",
     description:
-      "A more advanced version of RITASARI, with enhanced features. Responsible as a front-end developer using Vue.js.",
-    technologies: ["Vue.js", "Express.js", "WebSocket"],
+      "A more advanced version of RITASARI, with enhanced features. Responsible as a front-end developer using Vue.js and WebSocket.",
+    technologies: ["Vue.js", "Electron.js", "Socket.io", "Express.js"],
   },
   {
-    name: "Basyir",
+    name: "Basyir - Islamic Reminder Platform",
     description:
-      "An application for tracking daily worship activities. Developed the front-end using modern UI principles.",
-    technologies: ["React.js", "Tailwind CSS"],
+      "An Islamic reminder platform designed to help users record and track daily worship activities with customizable daily notes. Developed using React.js and CodeIgniter.",
+    technologies: ["React.js", "CodeIgniter"],
   },
   {
     name: "Parkfacilities",
     description:
-      "A web-based application introducing city parks in Bandung. Responsible as a front-end developer and ensured mobile responsiveness.",
-    technologies: ["HTML", "CSS", "JS", "Boostrap"],
+      "A web-based application introducing city parks in Bandung. Developed the front-end and ensured mobile responsiveness.",
+    technologies: ["Vue.js", "CSS", "JavaScript", "Bootstrap"],
   },
   {
     name: "Service Vessel Trajectory Prediction",
     description:
-      "Developed a ship prediction service implemented in a combat management system simulator. Role: System Analyst.",
-    technologies: ["C++", "Extended Kalman Filter", "Combat Management Systems", "MQTT"],
+      "Developed a ship trajectory prediction service implemented in a combat management system simulator using Extended Kalman Filter.",
+    technologies: ["C++", "Extended Kalman Filter", "MQTT", "Combat Management Systems"],
   },
   {
     name: "Aiz Elektronik Company Profile",
@@ -46,6 +46,30 @@ const projects = [
       "Developed a real-time monitoring system for automatic sorting using conveyor machines. Integrated WebSocket for live updates.",
     technologies: ["MERN Stack", "WebSocket", "IoT Integration"],
   },
+  {
+    name: "Geopark Ciletuh Website",
+    description:
+      "A tourism information portal for Geopark Ciletuh. Developed the front-end using Vue.js for an optimized user experience.",
+    technologies: ["Vue.js", "CSS", "JavaScript"],
+  },
+  {
+    name: "Uncall: Uncontrolled Ball Game 3D",
+    description:
+      "A physics-based arcade multiplayer game developed using Godot Engine.",
+    technologies: ["Godot Engine", "Physics-based Movement", "Multiplayer"],
+  },
+  {
+    name: "GradCAM-Based Visual Explanation Model",
+    description:
+      "Web-based AI explainability platform using Streamlit to visualize GradCAM heatmaps from deep learning models.",
+    technologies: ["Streamlit", "Python", "GradCAM", "Machine Learning"],
+  },
+  {
+    name: "Machine Learning - Classification & Clustering",
+    description:
+      "Developed classification and clustering models using supervised and unsupervised learning techniques.",
+    technologies: ["Python", "Scikit-Learn", "Random Forest", "K-Means", "DBSCAN"],
+  },
 ];
 
 export default function Projects() {
@@ -59,15 +83,12 @@ export default function Projects() {
       className="py-16 px-6 md:px-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto">
-        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           Projects
         </h2>
         <p className="text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
           Here are some key projects I have worked on, showcasing my experience in front-end development, system analysis, and real-time applications.
         </p>
-
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6 mt-12">
           {projects.map((project, index) => (
             <motion.div
@@ -83,17 +104,12 @@ export default function Projects() {
               viewport={{ once: true }}
               className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border-l-4 border-green-500 cursor-pointer"
             >
-              {/* Project Name */}
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                 {project.name}
               </h3>
-
-              {/* Project Description */}
               <p className="mt-2 text-gray-700 dark:text-gray-300">
                 {project.description}
               </p>
-
-              {/* Technologies Used */}
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span
@@ -104,8 +120,6 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-
-              {/* Live Demo Button (Jika Ada) */}
               {project.liveDemo && (
                 <motion.a
                   href={project.liveDemo}
