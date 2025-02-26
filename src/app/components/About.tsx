@@ -67,11 +67,11 @@ export default function About() {
         {/* Statistik */}
         <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-6 space-y-4 sm:space-y-0 sm:space-x-8">
           <div>
-            <p className="text-2xl sm:text-3xl font-bold text-green-500">7+</p>
+            <p className="text-2xl sm:text-3xl font-bold text-green-500">10+</p>
             <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Projects Completed</p>
           </div>
           <div>
-            <p className="text-2xl sm:text-3xl font-bold text-green-500">7+</p>
+            <p className="text-2xl sm:text-3xl font-bold text-green-500">10+</p>
             <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">Satisfied Clients</p>
           </div>
         </div>
