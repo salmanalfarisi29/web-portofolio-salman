@@ -25,7 +25,7 @@ export default function Footer() {
             <span>GitHub</span>
           </a>
 
-          <a
+{/*           <a
             href="https://linkedin.com/in/salmanalfarisi31"
             target="_blank"
             rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export default function Footer() {
           >
             <FiLinkedin size={20} />
             <span>LinkedIn</span>
-          </a>
+          </a> */}
         </div>
 
         {/* Copyright */}
