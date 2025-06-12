@@ -84,7 +84,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          src="/profile.png"
+          src="/profile2.png"
           alt="Salman Alfarisi"
           className="relative z-10 w-60 h-60 md:w-96 md:h-96 object-cover rounded-full shadow-lg"
         />
